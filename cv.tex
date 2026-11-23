@@ -1,0 +1,81 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% Modern CV themes
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+% Character encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Adjust the page margins
+\usepackage[scale=0.85]{geometry}
+
+% Personal data
+\name{Raavi}{Mohindar}
+\title{Curriculum Vitae}
+\address{August-Bebel-Allee 124}{28329 Bremen}{}
+\phone[mobile]{+49~176~63095842}
+\email{raavi.mohindar.rao@gmail.com}
+\photo[64pt][0.4pt]{Raavi.jpg}
+
+\begin{document}
+	\makecvtitle
+	
+	%--------------------------------------------------
+	\section{Job Experience}
+	
+	\cventry
+	{2006 -- Present}
+	{Software Engineer / Research Engineer}
+	{Mician GmbH}
+	{Germany}
+	{}
+	{				
+		\begin{itemize}
+			\item Implemented full-wave \textbf{Method of Moments (MoM)} solvers using \textbf{Electric Field Integral Equation (EFIE)} and \textbf{Magnetic Field Integral Equation (MFIE)} formulations for electromagnetic radiation and scattering problems, including geometry discretization and matrix assembly.
+			\item Implemented \textbf{Fast Multipole Method (FMM)} acceleration for large-scale MoM systems to reduce computational complexity and memory requirements.
+			\item Partially implemented \textbf{Waveguide MoM solvers} for radiation problems, including treatment of boundary conditions, modal field representations, and excitation models.
+			\item Developed \textbf{CUDA-based direct solvers} for large systems of linear equations arising from electromagnetic discretizations, with attention to numerical stability and performance on GPU architectures.
+			\item Applied \textbf{multi-threading} techniques using \textbf{OpenMP} to accelerate computationally intensive workloads in shared-memory environments.
+			\item Gained practical exposure to \textbf{MPI} concepts by emulating distributed execution using virtual machines to understand data distribution and communication patterns.
+			\item Designed and implemented \textbf{Horn Antenna Synthesis} tools, including geometry generation, parameterization, and performance evaluation through simulation.
+			\item Worked on \textbf{Reflector Antenna Design}, including reflector geometry generation and analysis of radiation patterns and gain characteristics.
+			\item Ported a legacy \textbf{COM-based component} to Python and expanded the exposed API to support automation, scripting, and integration into analysis workflows.
+			\item Applied \textbf{XGBoost} models to predict optimal geometric design parameters from electromagnetic performance metrics, reducing reliance on manual tuning and iterative optimization.
+		\end{itemize}		
+	}
+	
+	%--------------------------------------------------
+	\section{School and University}
+	
+	\cventry{2002 -- 2006}{M.Sc. Communication \& Information Technology}{University of Bremen}{Bremen}{}{Master Thesis: ``Analysis of iterative multi-user detection by information theory''.}
+	
+	\cventry{1997 -- 2001}{Bachelor of Engineering. Electronics and Communication}{University of Madras}{India}{}{Thesis: ``Serial communication between battery controller and computer''.}
+	
+	\cventry{1985 -- 1997}{School}{S.V.M.Hr.Sec. School, Thiruvallur, Tamil Nadu}{India}{}{}
+	
+	%--------------------------------------------------
+	\section{Languages}
+	
+	\cvitem{English}{Fluent}
+	\cvitem{German}{Basic / Intermediate}
+	\cvitem{Telugu}{Native}
+	
+	%--------------------------------------------------
+	\section{Computer Knowledge}
+	
+	\cvitem{Programming}{C++, Python, C\#}
+	\cvitem{Parallel Computing}{CUDA, OpenMP; MPI (limited, experimental)}
+	\cvitem{Numerical Computing}{Linear solvers, full-wave electromagnetic simulations}
+	
+	\section{Computer Knowledge}
+	\cvitem{Machine Learning}{XGBoost for engineering optimization}
+	\cvitem{Platforms}{Windows, Linux}
+	\cvitem{Tools}{Git, Visual Studio, Visual Studio Code}
+	
+	%--------------------------------------------------
+	\section{Hobbies}
+	\cvitem{}{Analog photography, including film development and optical darkroom printing.}
+		
+\end{document}

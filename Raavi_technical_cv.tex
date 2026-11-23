@@ -1,0 +1,63 @@
+\documentclass[10pt,a4paper,sans]{moderncv}
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[scale=0.84]{geometry}
+\usepackage{microtype}
+\setlength{\hintscolumnwidth}{2.65cm}
+
+\name{Mohindar Rao}{Raavi}
+\title{Scientific Software Developer}
+\address{August-Bebel-Allee 124}{28329 Bremen, Germany}{}
+\phone[mobile]{0176\,630\,958\,42}
+\phone[fixed]{0421\,84785652}
+\email{raavi.mohindar.rao@googlemail.com}
+% Optional portrait: place Raavi.jpg alongside this file.
+\IfFileExists{Raavi.jpg}{\photo[64pt][0.4pt]{Raavi.jpg}}{}
+
+\begin{document}
+\makecvtitle
+\vspace*{-1em}
+
+\section{Profile}
+\cvitem{}{Scientific software developer with nearly 20 years of experience building microwave and antenna engineering applications. Combines professional C\#/.NET development with independent C++ research in computational electromagnetics. Experienced in implementing electromagnetic formulations, integrating numerical libraries, and improving solver performance and memory efficiency.}
+
+\section{Professional Experience}
+\cventry{2006--present}{Software Developer}{Mician GmbH}{Bremen, Germany}{}{Develop and maintain engineering software for microwave component and antenna simulation and design.
+\begin{itemize}
+\item Developed tools for horn-antenna synthesis and analysis, reflector design using computed feed characteristics, and time-domain tuning of waveguide filters.
+\item Integrated numerical libraries into C\# applications using COM, P/Invoke, and native-code interoperability, including Windows messaging.
+\item Structured application components using Model--View--Controller; introduced automated testing with NUnit and NSubstitute.
+\item Provided customer support, debugging, API examples, technical documentation, and product demonstrations.
+\item Supervised a master's thesis on multithreaded optimization of design variables.
+\end{itemize}}
+
+\section{Technical Skills}
+\cvitem{Programming}{C++, C\#, Python, MATLAB, VBA}
+\cvitem{Electromagnetics}{Surface integral equations; MoM, MLFMM, FEM--MoM coupling; waveguide modes; antenna radiation, polarization, and radar cross section}
+\cvitem{Numerical methods}{Block GMRES; block Jacobi and restricted additive Schwarz; Schur complements; rank-revealing QR; dense, sparse, and hierarchical linear algebra}
+\cvitem{Libraries and tools}{Intel oneMKL, OpenMP, HLIBpro, Eigen, GSL, Gmsh, CMake, Git}
+\cvitem{Software engineering}{.NET, COM, P/Invoke, MVC, NUnit, NSubstitute; Windows and Linux}
+
+\newpage
+\section{Independent Research and Software Development}
+
+\cvitem{MoM/MLFMM solver}{Developed a C++ surface-integral-equation solver for perfectly electrically conducting structures, using Rao--Wilton--Glisson (RWG) basis functions and EFIE, MFIE, and CFIE formulations. Accelerated matrix--vector products with the multilevel fast multipole method (MLFMM). Tested problems exceeding one million unknowns and optimized computation time and memory consumption. The solver provides the foundation for the scattering and radiation applications below.}
+
+\cvitem{Antenna radiation}{Developed a hybrid FEM--MoM/MLFMM solver for horn antennas and horn-fed reflectors. Represented the horn interior as a two-port network between the feed waveguide and aperture. A finite-element model supplies its generalized scattering matrix (GSM) and aperture modal fields. Converting the GSM to a modal admittance matrix couples equivalent magnetic currents at the aperture to electric currents on exterior conducting surfaces. Solved the coupled integral equations iteratively with MLFMM acceleration, then evaluated radiation patterns, directivity, gain, and polarization.}
+
+\cvitem{Cavity scattering}{Implemented the hybrid MoM/modal-admittance formulation of Enneking, Ritter, and B\"unger (EuMC 2003) for plane-wave scattering from cavity-backed apertures. Modelled the cavity as a one-port by short-circuiting the far waveguide port. The dense MoM implementation reproduces published radar cross sections for a rectangular cavity; an MLFMM-accelerated implementation is in development.}
+
+\cvitem{Iterative solvers}{Implemented block Jacobi and restricted additive Schwarz preconditioners, including local Schur complements compressed with rank-revealing QR; integrated hierarchical-LU preconditioning through HLIBpro. Developed block GMRES to solve multiple right-hand sides simultaneously, including different incidence angles and polarizations. Used Intel oneMKL and OpenMP for numerical performance.}
+
+\cvitem{$\mathcal{H}^2$ methods}{Experimental $\mathcal{H}^2$-matrix approach to the same surface integral equations, investigated as an alternative to MLFMM for far-field interactions, with attention to accuracy, execution time, and memory requirements.}
+
+\section{Education}
+\cventry{2002--2006}{M.Sc., Communication and Information Technology}{University of Bremen}{Germany}{}{Thesis: ``Analysis of iterative multi-user detection by information theory.''}
+\cventry{1997--2001}{B.E., Electronics and Communication}{University of Madras}{India}{}{Thesis: ``Serial communication between battery controller and computer.''}
+
+\section{Languages and Interests}
+\cvitem{Languages}{English (fluent); German (good)}
+\cvitem{Interests}{Film photography, including film development and silver-gelatin darkroom printing.}
+\end{document}
